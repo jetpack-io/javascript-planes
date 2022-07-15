@@ -1,0 +1,10 @@
+node_modules
+package-lock.json
+dist
+redis-data
+/api/public/**
+!/api/public/favicon.ico
+.DS_Store
+._.DS_Store
+.vscode
+*.orig
