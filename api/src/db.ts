@@ -13,6 +13,14 @@ export function getRedisUrl(): string {
     return REDIS_URL;
   }
 
+  const {
+    JETPACK_RUNTIME_REDIS_PASSWORD: password
+  } = process.env;
+  if (password) {
+    const host = 'jetpack-runtime-redis-master';
+    return `redis://:${password}@${host}:6379`;
+  }
+
   return 'redis://localhost:6379'; // guess
 }
 

@@ -6,7 +6,7 @@ This is a Vue app written in TypeScript that shows planes on a Leaflet map.
 
 ## Usage
 
-1. Start the `data-load` and `api` projects.
+1. Start the `api` project.
 
 2. Run `npm install` to install all npm packages.
 

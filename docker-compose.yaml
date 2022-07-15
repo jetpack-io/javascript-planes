@@ -11,15 +11,6 @@ services:
     volumes:
     - ./redis-data:/data
 
-  # loads data from OpenSky Network into Redis
-  data-load:
-    build:
-      context: data-load
-    environment:
-    - REDIS_URL=redis://redis:6379
-    depends_on:
-    - redis
-
   # includes both the Express api and Vue app
   webapp:
     build:

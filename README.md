@@ -15,6 +15,28 @@ This sample app shows how easy it is to get started with Jetpack.io.
 - User Application: an Express API queries data and surfaces it to a Single Page Application (SPA) written in Vue.
 
 
+## Run with Jetpack
+
+1. Install the [Jetpack.io CLI](https://www.jetpack.io/docs/getting-started/quickstart) and login to Jetpack.io
+
+   ```sh
+   curl https://get.jetpack.io -fsSL | bash
+   jetpack auth login
+   ```
+
+2. Run the app on the Jetpack.io demo cluster.
+
+   ```sh
+   jetpack dev
+   ```
+
+   This builds the app locally (requires a container runtime like [Docker Desktop](https://www.docker.com/products/docker-desktop)), starts the app in the cloud, and proxies requests and logs to your local machine
+
+3. Browse to the site running in the cloud and proxied to http://localhost:8080/ and watch the planes move.  Click on a plane to see the details.
+
+4. Note the logs streamed to your terminal.
+
+
 ## Run with Containers
 
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop) if it isn't installed already.
@@ -42,15 +64,7 @@ This sample app shows how easy it is to get started with Jetpack.io.
 
    Alternatively, you can set `REDIS_URL` to match your existing cluster.
 
-2. Run the cron job.
-
-   ```sh
-   cd data-load
-   npm install
-   npm start
-   ```
-
-3. Start the API.
+2. Start the API.
 
    ```sh
    cd api
@@ -58,7 +72,7 @@ This sample app shows how easy it is to get started with Jetpack.io.
    npm start
    ```
 
-4. Start the UI.
+3. Start the UI.
 
    ```sh
    cd app
@@ -66,7 +80,7 @@ This sample app shows how easy it is to get started with Jetpack.io.
    npm run serve
    ```
 
-5. Browse to http://localhost:8000/ and watch the planes move.  Click on a plane to see the details.
+4. Browse to http://localhost:8000/ and watch the planes move.  Click on a plane to see the details.
 
 
 ## License
